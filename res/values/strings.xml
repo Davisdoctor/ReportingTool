@@ -1,0 +1,16 @@
+<resources>
+
+    <string name="app_name">ReportingTool</string>
+    <string name="heading">Reporting Tool Mobile App</string>
+    <string name="case_report">Report Case</string>
+    <string name="response">Police Response</string>
+    <string name="case_list">Submitted Cases</string>
+    <string name="policies">Community Policies</string>
+    <string name="settings">Settings</string>
+    <string name="footer">Designed by Darius</string>
+    <string-array name="sex_array">
+        <item >Male</item>
+         <item >Female</item>
+    </string-array>
+
+</resources>
