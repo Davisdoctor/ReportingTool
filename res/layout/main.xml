@@ -29,6 +29,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/case_list" />
+    
+    <Button
+        android:id="@+id/accusedListBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/accussed_list" />
+    
+    <Button
+        android:id="@+id/complaintListBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/complaint_list" />
 
     <Button
         android:id="@+id/settingsBtn"

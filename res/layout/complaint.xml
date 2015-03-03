@@ -11,7 +11,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <EditText
-        android:id="@+id/pNames"
+        android:id="@+id/compPNames"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10" >
@@ -27,7 +27,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <EditText
-        android:id="@+id/telNumber"
+        android:id="@+id/compTelNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -41,7 +41,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <EditText
-        android:id="@+id/accussedAge"
+        android:id="@+id/compAge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -55,7 +55,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <Spinner
-        android:id="@+id/sexSpinnner"
+        android:id="@+id/compSexSpinnner"
         android:layout_width="match_parent"
         android:entries="@array/sex_array"
         android:layout_height="wrap_content" />
@@ -68,7 +68,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <EditText
-        android:id="@+id/accussedOccupation"
+        android:id="@+id/compOccupation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10" />
@@ -81,7 +81,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <EditText
-        android:id="@+id/accussedTribe"
+        android:id="@+id/compTribe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10" />
@@ -94,7 +94,8 @@
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <Spinner
-        android:id="@+id/spinner2"
+        android:id="@+id/compReportSpinner"
+        android:prompt="@string/spinner_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     
@@ -106,8 +107,9 @@
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <Spinner
-        android:id="@+id/categorySpinner"
+        android:id="@+id/compCategorySpinner"
         android:layout_width="match_parent"
+        android:entries="@array/cat_array"
         android:layout_height="wrap_content" />
     
     <Button

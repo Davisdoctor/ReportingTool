@@ -3,13 +3,15 @@ package com.bsu.reporting_tool.db_helper;
 import android.app.Activity;
 import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
+import android.widget.Toast;
 
 public class BuildDB extends Activity {
-SQLiteDatabase sqliteManager;
-String crimeColumns[]={"serialNumber","crime","incidenceOccurred","areaOccurred","evidence","date","victimRelationship","personReporting"};
-String accussedColumns[]={"accussedPerson","accussedTel","accussedAge","accussedSex","accussedOccupation","accussedTribe","reportingId"};
-String complaintColumns[]={"complaintName","compalaintAge","complaintSex","complaintOccupation","complaintTribe","complaintReport","reportingId","category"};
+public SQLiteDatabase sqliteManager;
+public static final String crimeColumns[]={"serialNumber","crime","incidenceOccurred","areaOccurred","evidence","date","victimRelationship","personReporting"};
+public static final String accussedColumns[]={"accussedPerson","accussedTel","accussedAge","accussedSex","accussedOccupation","accussedTribe","reportingId"};
+public static final String complaintColumns[]={"complaintName","compalaintAge","complaintSex","complaintOccupation","complaintTribe","complaintReport","reportingId","category"};
 //method for creating the tables at run time 
+//this function is not being used---createDatbaseTables
 public void createDatabaseTables()
 {
 	try {
@@ -25,7 +27,8 @@ public void createDatabaseTables()
 													"evidence text," +
 													"date text," +
 													"victimRelationship text," +
-													"personReporting text)");
+													"personReporting text);");
+		Toast.makeText(getApplicationContext(), "Created", Toast.LENGTH_LONG).show();
 		//table for holding the accussed information 
 		sqliteManager.execSQL("create table accussed(" +
 				"accussedId integer primary key autoincrement," +
@@ -35,7 +38,7 @@ public void createDatabaseTables()
 				"accussedSex text," +
 				"accussedOccupation text," +
 				"accussedTribe text," +
-				"reportingId text)");
+				"reportingId text);");
 		
 		//table for holding all the complaints
 		sqliteManager.execSQL("create table complaints(" +
@@ -47,25 +50,28 @@ public void createDatabaseTables()
 				"complaintTribe text," +
 				"complaintReport text," +
 				"reportingId text," +
-				"category text)");
+				"category text);");
 		
 	} catch (Exception e) {
 		// TODO: handle exception
+		Toast.makeText(getApplicationContext(), "Not Created", Toast.LENGTH_LONG).show();
 		e.printStackTrace();
 	}
 }
 
-public long saveRecord(String[]details, String columns[],String tableName){
+public void saveRecord(String[]details, String columns[],String tableName){
 	 ContentValues values = new ContentValues();
 	 for(int i=0; i<details.length; i++){
 		 
 		 values.put(columns[i],details[i]);
-		 System.out.println(columns[i]+"::::::"+details[i]);
 		
 	 }
- return sqliteManager.insert(tableName, null, values);
-// Toast.makeText(this.context, "the data has been submited in the database", Toast.LENGTH_SHORT).show();
+ sqliteManager.insert(tableName, null, values);
 
 }
-
+public void closeDb(){
+sqliteManager.close();
+ //this.close();
+ 
+}
 }

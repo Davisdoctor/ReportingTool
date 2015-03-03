@@ -13,7 +13,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <EditText
-        android:id="@+id/pNames"
+        android:id="@+id/accusedPNames"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10" >
@@ -29,7 +29,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <EditText
-        android:id="@+id/telNumber"
+        android:id="@+id/accussedTelNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -57,7 +57,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <Spinner
-        android:id="@+id/sexSpinnner"
+        android:id="@+id/accussedSexSpinnner"
         android:layout_width="match_parent"
         android:entries="@array/sex_array"
         android:layout_height="wrap_content" />
@@ -96,7 +96,8 @@
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <Spinner
-        android:id="@+id/spinner2"
+        android:id="@+id/accussedReportSpinner"
+        android:prompt="@string/spinner_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <Button

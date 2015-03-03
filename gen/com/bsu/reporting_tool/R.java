@@ -9,6 +9,7 @@ package com.bsu.reporting_tool;
 
 public final class R {
     public static final class array {
+        public static final int cat_array=0x7f050001;
         public static final int sex_array=0x7f050000;
     }
     public static final class attr {
@@ -17,24 +18,45 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int accusedLinkBtn=0x7f070017;
+        public static final int accusedLinkBtn=0x7f07002e;
+        public static final int accusedListBtn=0x7f070022;
+        public static final int accusedPNames=0x7f070001;
         public static final int accussedAge=0x7f070005;
         public static final int accussedOccupation=0x7f070009;
+        public static final int accussedReportSpinner=0x7f07000d;
+        public static final int accussedSexSpinnner=0x7f070007;
+        public static final int accussedTelNumber=0x7f070003;
         public static final int accussedTribe=0x7f07000b;
-        public static final int caseListBtn=0x7f070014;
-        public static final int caseReportBtn=0x7f070012;
-        public static final int categorySpinner=0x7f07000f;
-        public static final int complaintLinkBtn=0x7f070018;
-        public static final int editText1=0x7f070016;
-        public static final int pNames=0x7f070001;
-        public static final int responsesBtn=0x7f070013;
+        public static final int area=0x7f070013;
+        public static final int caseListBtn=0x7f070021;
+        public static final int caseReportBtn=0x7f07001f;
+        public static final int case_list=0x7f07001e;
+        public static final int compAge=0x7f070016;
+        public static final int compCategorySpinner=0x7f07001b;
+        public static final int compOccupation=0x7f070018;
+        public static final int compPNames=0x7f070014;
+        public static final int compReportSpinner=0x7f07001a;
+        public static final int compSexSpinnner=0x7f070017;
+        public static final int compTelNumber=0x7f070015;
+        public static final int compTribe=0x7f070019;
+        public static final int complaintLinkBtn=0x7f07002f;
+        public static final int complaintListBtn=0x7f070023;
+        public static final int crime=0x7f070011;
+        public static final int crimeInput=0x7f070026;
+        public static final int dateInput=0x7f07002a;
+        public static final int evidenceInput=0x7f070029;
+        public static final int iNameInput=0x7f070027;
+        public static final int incidenceOccurred=0x7f070012;
+        public static final int occuranceInput=0x7f070028;
+        public static final int personInput=0x7f07002c;
+        public static final int responsesBtn=0x7f070020;
         public static final int saveAccussedBtn=0x7f07000e;
-        public static final int saveComplaintBtn=0x7f070010;
-        public static final int settingsBtn=0x7f070015;
-        public static final int sexSpinnner=0x7f070007;
-        public static final int spinner2=0x7f07000d;
-        public static final int telNumber=0x7f070003;
-        public static final int textView1=0x7f070011;
+        public static final int saveCaseBtn=0x7f07002d;
+        public static final int saveComplaintBtn=0x7f07001c;
+        public static final int serialNumberInput=0x7f070025;
+        public static final int serial_number=0x7f070010;
+        public static final int settingsBtn=0x7f070024;
+        public static final int textView1=0x7f07001d;
         public static final int textView2=0x7f070000;
         public static final int textView3=0x7f070002;
         public static final int textView4=0x7f070004;
@@ -42,26 +64,32 @@ public final class R {
         public static final int textView6=0x7f070008;
         public static final int textView7=0x7f07000a;
         public static final int textView8=0x7f07000c;
+        public static final int vRelationInput=0x7f07002b;
+        public static final int view_accidents_list_entries=0x7f07000f;
     }
     public static final class layout {
         public static final int accussed=0x7f030000;
-        public static final int complaint=0x7f030001;
-        public static final int list_cases=0x7f030002;
-        public static final int main=0x7f030003;
-        public static final int policies=0x7f030004;
-        public static final int report_crime=0x7f030005;
-        public static final int settings=0x7f030006;
-        public static final int settings_menu=0x7f030007;
+        public static final int case_list_details=0x7f030001;
+        public static final int complaint=0x7f030002;
+        public static final int list_cases=0x7f030003;
+        public static final int main=0x7f030004;
+        public static final int policies=0x7f030005;
+        public static final int report_crime=0x7f030006;
+        public static final int settings=0x7f030007;
+        public static final int settings_menu=0x7f030008;
     }
     public static final class string {
+        public static final int accussed_list=0x7f040009;
         public static final int app_name=0x7f040000;
         public static final int case_list=0x7f040004;
         public static final int case_report=0x7f040002;
+        public static final int complaint_list=0x7f04000a;
         public static final int footer=0x7f040007;
         public static final int heading=0x7f040001;
         public static final int policies=0x7f040005;
         public static final int response=0x7f040003;
         public static final int settings=0x7f040006;
+        public static final int spinner_title=0x7f040008;
     }
     public static final class style {
         /** 

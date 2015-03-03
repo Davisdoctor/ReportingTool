@@ -12,5 +12,13 @@
         <item >Male</item>
          <item >Female</item>
     </string-array>
-
+    
+    <string-array name="cat_array">
+        <item >Domestic</item>
+         <item >Crime/Robbery</item>
+    </string-array>
+    
+	<string name="spinner_title">Select Report</string>
+	<string name="accussed_list">Submitted Accussed List</string>
+	<string name="complaint_list">Submitted Complaint List</string>
 </resources>

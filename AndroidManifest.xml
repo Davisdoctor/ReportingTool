@@ -33,10 +33,13 @@
             android:label="Settings"></activity>
         
         <activity android:name=".Complaint"
-            android:label="Settings"></activity>
+            android:label="Complaints"></activity>
         
         <activity android:name=".Accussed"
-            android:label="Settings"></activity>
+            android:label="Accussed"></activity>
+        
+        <activity android:name=".List_Cases"
+            android:label="List Cases"></activity>
     </application>
 
 </manifest>
