@@ -11,7 +11,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class MyDatabase {
 	//setting up table rows from here
-//creating databse name and table
+//creating database name and table
 private static final String DATABASE_NAME="cases_db";
 
 //giving the database a version
@@ -72,7 +72,6 @@ db.execSQL("create table complaints(" +
 	
 	
 }
-
 @Override
 public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 	// TODO Auto-generated method stub
@@ -147,7 +146,9 @@ public List<String> getAllLabels(){
 	// returning lables
 	return labels;
 }
-public long createEntry(String [] details, String [] columns,String dbTable) {
+
+//method for saving in a particular database table
+public long createEntry(String [] details, String [] columns,String dbTableName) {
 	// TODO Auto-generated method stub
 	ContentValues cv=new ContentValues();
 	for(int i=0; i<details.length; i++){
@@ -155,7 +156,7 @@ public long createEntry(String [] details, String [] columns,String dbTable) {
 		 cv.put(columns[i],details[i]);
 	 }
 	//data inserted from here.pick all values of cv
-	return ourDatabase.insert(dbTable, null, cv);
+	return ourDatabase.insert(dbTableName, null, cv);
 }
 
 //public String getData() {
@@ -177,6 +178,4 @@ public long createEntry(String [] details, String [] columns,String dbTable) {
  * Getting all labels
  * returns list of labels
  * */
-
-
 }

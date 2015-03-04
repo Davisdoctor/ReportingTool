@@ -66,5 +66,11 @@ public void onClick(View view)
 		break;
 	}
 }
+@Override
+protected void onPause() {
+	// TODO Auto-generated method stub
+	super.onPause();
+	finish();
+}
 	
 }
