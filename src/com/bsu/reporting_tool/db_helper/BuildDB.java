@@ -8,6 +8,7 @@ import android.widget.Toast;
 public class BuildDB extends Activity {
 public SQLiteDatabase sqliteManager;
 public static final String crimeColumns[]={"serialNumber","crime","incidenceOccurred","areaOccurred","evidence","date","victimRelationship","personReporting"};
+public static final String crimeColumnsFecth[]={"_id,serialNumber","crime","incidenceOccurred","areaOccurred","evidence","date","victimRelationship","personReporting"};
 public static final String accussedColumns[]={"accussedPerson","accussedTel","accussedAge","accussedSex","accussedOccupation","accussedTribe","reportingId"};
 public static final String complaintColumns[]={"complaintName","compalaintAge","complaintSex","complaintOccupation","complaintTribe","complaintReport","reportingId","category"};
 //method for creating the tables at run time 

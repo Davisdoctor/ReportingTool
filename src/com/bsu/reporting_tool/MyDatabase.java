@@ -6,13 +6,14 @@ import java.util.List;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class MyDatabase {
 	//setting up table rows from here
 //creating database name and table
-private static final String DATABASE_NAME="cases_db";
+private static final String DATABASE_NAME="rcase_db";
 
 //giving the database a version
 private static final int DATABASE_VERSION=1;
@@ -36,7 +37,7 @@ public void onCreate(SQLiteDatabase db) {
 	// TODO Auto-generated method stub
 	//create table when this method is first run
 db.execSQL("create table crime_reporting(" +
-			"crimeId integer primary key autoincrement," +
+			"_id integer primary key autoincrement," +
 			"serialNumber text," +
 			"crime text," +
 			"incidenceOccurred text," +
@@ -48,7 +49,7 @@ db.execSQL("create table crime_reporting(" +
 //Toast.makeText(getApplicationContext(), "Created", Toast.LENGTH_LONG).show();
 //table for holding the accussed information 
 db.execSQL("create table accussed(" +
-"accussedId integer primary key autoincrement," +
+"_id integer primary key autoincrement," +
 "accussedPerson text," +
 "accussedTel text," +
 "accussedAge text," +
@@ -59,7 +60,7 @@ db.execSQL("create table accussed(" +
 
 //table for holding all the complaints
 db.execSQL("create table complaints(" +
-"complaintId integer primary key autoincrement," +
+"_id integer primary key autoincrement," +
 "complaintName text," +
 "compalaintAge text," +
 "complaintSex text," +
@@ -146,6 +147,23 @@ public List<String> getAllLabels(){
 	// returning lables
 	return labels;
 }
+public void openWritableDb() throws SQLException{
+	
+	ourDatabase = ourHelper.getWritableDatabase();	
+	
+	
+	}
+public void opeReadblenDb() throws SQLException{
+	
+	ourDatabase = ourHelper.getWritableDatabase();	
+	
+	if(ourDatabase.isOpen()){
+		
+		
+		//Toast.makeText(context, "database opened successfully", Toast.LENGTH_SHORT).show();
+		
+	}
+	}
 
 //method for saving in a particular database table
 public long createEntry(String [] details, String [] columns,String dbTableName) {

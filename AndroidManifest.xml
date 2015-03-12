@@ -6,7 +6,7 @@
     <uses-sdk
         android:minSdkVersion="10"
         android:targetSdkVersion="10" />
-
+	
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -38,8 +38,6 @@
         <activity android:name=".Accussed"
             android:label="Accussed"></activity>
         
-        <activity android:name=".List_Cases"
-            android:label="List Cases"></activity>
     </application>
 
 </manifest>
